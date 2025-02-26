@@ -1,0 +1,274 @@
+:root {
+  --success-color: #28A745; 
+  --error-color: #C42A02; 
+}
+
+:root {
+  --background-color: #FFFFFF;
+  --primary-color: #DBE2EF;
+  --secondary-color: #3F72AF; 
+  --text-color: #112D4E; 
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--secondary-color);
+}
+
+.custom-navbar {
+  background-color: var(--background-color); /* Dark background for Navbar */
+  border-radius: 2px;
+  border-bottom: 1px solid #ccc; /* Light gray border */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.custom-navbar .navbar-brand {
+  color: var(--text-color); /* Light color for brand text */
+}
+
+.custom-navbar .nav-link {
+  color: var(--text-color); /* Light color for Nav links */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--secondary-color); /* Change color on hover */
+}
+
+.custom-navbar .nav-link.active {
+  color: var(--background-color); /* Color for the active link */
+  background-color: var(--secondary-color); /* Color for the active link */
+  border-radius: 8px; /* Color for the active link */
+}
+
+.sector-height {
+    height: 600px;
+}
+
+.ge-nav-link-hover:hover {
+    color: #0033FF;
+}
+
+.ge-hover:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeArrow {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  
+  .arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  
+  .arrow {
+    font-size: 1rem; 
+    animation: fadeArrow 7s infinite; 
+    color: var(--primary-color);
+  }
+
+  .click-card {
+    font-size: 1rem; 
+    animation: fadeArrow 3s infinite; 
+    color: var(--primary-color);
+  }
+
+  .card-container {
+    width: 100%;
+    height: 350px; /* Set a fixed height for the container */
+    perspective: 1000px;
+  }
+  
+  .card-content {
+    width: 100%;
+    height: 100%; /* Make sure the card content takes up the entire height */
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .card-front, .card-back {
+    width: 100%;
+    height: 340px;  
+    position: absolute; /* Stack the front and back */
+    backface-visibility: hidden;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-front {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    position: absolute;
+  }
+  
+  .card-back {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transform: rotateY(180deg);
+  }  
+
+  .flipped .card-content {
+    transform: rotateY(180deg);
+  }
+  
+  .card-back {
+    background-color: var(--primary-color);
+    color: var(--text-color); /* White text on back card */
+    transform: rotateY(180deg);
+    position: relative;
+  }
+
+  .fw-italic {
+    font-style: italic;
+  }
+  
+/* Animations */
+.highcharts-figure {
+    margin: 0;
+}
+
+#play-controls {
+    max-width: 1000px;
+    margin: 1em auto;
+}
+
+#container {
+    height: 900px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#play-pause-button {
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid rgba(2, 117, 255, 1);
+    border-radius: 25px;
+    color: white;
+    background-color: rgba(2, 117, 255, 1);
+    transition: background-color 250ms;
+}
+
+#play-pause-button:hover {
+    background-color: rgba(2, 117, 255, 0.5);
+}
+
+#play-range {
+    transform: translateY(2.5px);
+    width: calc(100% - 90px);
+    background: #f8f8f8;
+}
+
+#dots {
+  transition: secondary-color 0.3s, color 0.3s;
+  border: 1px var(--secondary-color);
+  font-style: italic;
+}
+
+#dots:hover {
+  color: var(--secondary-color)
+}
+
+.min-h-content {
+  min-height: 95vh;
+  overflow-x: hidden; 
+}
+
+.container-flux {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-content {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+/*Loader*/
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: jump 0.6s infinite alternate;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes jump {
+  to {
+    transform: translateY(-15px);
+  }
+}

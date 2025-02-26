@@ -1,0 +1,56 @@
+.negotiation-content {
+    overflow-x: hidden; 
+    padding: 0; 
+    margin: 0;
+    font-size: 20px;
+}
+
+.negotiation-content img {
+    width: auto;
+    height: 100%;
+    max-height: 500px;
+}
+
+.banner-content {
+    background-color: #DBE2EF;
+    max-height: 700px;
+}
+
+.chevron {
+    transition: transform 0.3s ease;
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.collapse-header {
+    user-select: none;
+}
+
+.headline-content {
+    cursor: 'pointer';
+    background-color: #DBE2EF;
+    border-radius: 8px;
+    border-bottom: 1px solid #a29f9f; 
+    border-right: 1px solid #a29f9f; 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+/* Default arrow pointing to the right */
+.arrow-down-icon {
+    color: #6c757d;
+    transform: rotate(90deg); /* Default to pointing right */
+    transition: transform 0.3s ease;
+}
+
+/* For smaller screens, point the arrow down */
+@media (max-width: 768px) {
+    .arrow-down-icon {
+        transform: rotate(0deg); /* Arrow points straight down */
+    }
+}
+
+.row {
+    padding: 1rem;
+}

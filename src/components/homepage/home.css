@@ -1,0 +1,59 @@
+.hero-section {
+    position: relative;
+    height: 60vh;
+    background-image: url('/hero-image.jpg');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+    align-items: center;
+    text-align: left;
+    margin: 0;
+    line-height: 1.2;
+    color: #ffffff;
+    color: var(--background-color);
+  }
+
+  .fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 2s ease-out forwards;
+  opacity: 1;
+}
+
+.slide-up {
+  animation: slideUp 2.5s ease-in backwards;
+  opacity: 1;
+}
+
+.big-number {
+  background-color: var(--primary-color);
+
+}
+
+.image-responsive {
+  width: 100%;
+  height: auto; 
+  max-width: 100%;
+}
